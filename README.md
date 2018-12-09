@@ -22,7 +22,3 @@ If in one city, such as London, there are different warehouses, the manager can 
 of more than 1 warehouse. A customer Sometimes wants to store their cars in different
 locations, so a customer always comunicates with the company, to get to the manager
 of 1 location.
-
-# Funktioniert nicht.
-
-Die Tabelle Car enthält immer 2 foreign keys auf die Tabelle Customer. Warum weiß icht nicht.
