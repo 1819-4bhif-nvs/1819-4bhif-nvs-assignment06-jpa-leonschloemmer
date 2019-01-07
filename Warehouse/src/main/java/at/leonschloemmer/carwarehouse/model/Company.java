@@ -9,8 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-@Entity
-@Table(name = "company")
+@Entity(name = "company")
 public class Company {
 
     //region Properties

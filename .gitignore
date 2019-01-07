@@ -121,4 +121,7 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+### From me ###
+.idea
+
 # End of https://www.gitignore.io/api/java,maven,java-web,intellij
