@@ -1,20 +1,30 @@
 package at.leonschloemmer.carwarehouse.model;
 
 import at.leonschloemmer.carwarehouse.model.cars.Car;
+import at.leonschloemmer.carwarehouse.model.people.WarehouseManager;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "warehouse")
+@NamedQuery(name = "Warehouse.findAll", query = "select w from Warehouse w")
 public class Warehouse {
 
     //region Properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "warehouse_id")
     private Long id;
     private String location;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, mappedBy = "warehouses")
+    @JsonbTransient
+    @XmlTransient
+    //@JoinTable(name = "wh_whm", joinColumns = @JoinColumn(name = "warehouse_id"), inverseJoinColumns = @JoinColumn(name = "person_id"))
+    protected Set<WarehouseManager> managers;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "warehouse_id")
@@ -56,6 +66,15 @@ public class Warehouse {
     public void setStorageSpaces(Set<StorageSpace> storageSpaces) {
         this.storageSpaces = storageSpaces;
     }
+
+    public Set<WarehouseManager> getManagers() {
+        return managers;
+    }
+
+    public void setManagers(Set<WarehouseManager> managers) {
+        this.managers = managers;
+    }
+
     //endregion
 
     public void addStorageSpace(StorageSpace storageSpace) {
@@ -63,6 +82,13 @@ public class Warehouse {
             storageSpaces = new HashSet<>();
         }
         storageSpaces.add(storageSpace);
+    }
+
+    public void addWarehouseManager(WarehouseManager manager) {
+        if(managers == null) {
+            managers = new HashSet<>();
+        }
+        managers.add(manager);
     }
 
     public boolean storeCar(Car car) {

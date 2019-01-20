@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "car")
+@NamedQuery(name = "Car.findAll", query = "select c from Car c")
 public abstract class Car {
 
     //region Properties
@@ -24,6 +24,9 @@ public abstract class Car {
     private LocalDate storageStart;
     private LocalDate storageEnd;
     private String summertyreSpec;
+    @Transient
+    @ManyToOne
+    private Customer customer;
     //endregion
 
     //region Constructors
@@ -51,6 +54,17 @@ public abstract class Car {
         this.model = model;
         this.mileage = mileage;
         this.summertyreSpec = summertyreSpec;
+    }
+
+    public Car(int horsepower, int value, int yearProduced, String make, String model, int mileage, String summertyreSpec, Customer customer) {
+        this.horsepower = horsepower;
+        this.value = value;
+        this.yearProduced = yearProduced;
+        this.make = make;
+        this.model = model;
+        this.mileage = mileage;
+        this.summertyreSpec = summertyreSpec;
+        this.customer = customer;
     }
 
     //endregion
@@ -131,6 +145,15 @@ public abstract class Car {
     public void setSummertyreSpec(String summertyreSpec) {
         this.summertyreSpec = summertyreSpec;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     //endregion
 
 }

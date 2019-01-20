@@ -19,9 +19,9 @@ public class SupercarEndpoint {
     EntityManager em;
 
     @GET
-    public Response getSupercar() {
+    public Response getSupercars() {
         //return new Supercar(610, 250000, 2017, "Lamborghini", "Huracan", 16328, "Pirelli PZero Corsa 320/10", 5.0, "5w-30", "100 Octane", 300, 15);
-        TypedQuery<Supercar> query = em.createQuery("select s from supercar s", Supercar.class);
+        TypedQuery<Supercar> query = em.createNamedQuery("Supercar.findAll", Supercar.class);
         List<Supercar> supercarList = query.getResultList();
         return Response.ok().entity(supercarList).build();
     }

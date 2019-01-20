@@ -22,7 +22,7 @@ public class SupercarsEndpointIT {
     @Before
     public void initClient() {
         this.client = ClientBuilder.newClient();
-        this.target = client.target("http://localhost:8080/warehouse/rs/supercars");
+        this.target = client.target("http://localhost:8080/warehouse/rs/supercars/");
     }
 
     @Test

@@ -22,15 +22,15 @@ public class CustomerEndpoint {
 
     @GET
     public Response getCustomers() {
-        TypedQuery<Customer> query = em.createQuery("select c from customer c", Customer.class);
+        TypedQuery<Customer> query = em.createNamedQuery("Customer.findAll", Customer.class);
         List<Customer> customers = query.getResultList();
         return Response.ok().entity(customers).build();
     }
 
     @POST
     public Response addCustomer(Customer customer) {
-//        System.out.println("What");
-        TypedQuery<Company> query = em.createQuery("select c from company c", Company.class);
+        //TypedQuery<Company> query = em.createQuery("select c from Company c", Company.class);
+        TypedQuery<Company> query = em.createNamedQuery("Company.findAll", Company.class);
         Company c = query.getSingleResult();
         customer.setCompany(c);
         em.persist(customer);

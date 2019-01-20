@@ -9,7 +9,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-@Entity(name = "company")
+@Entity
+@NamedQuery(name = "Company.findAll", query = "select c from Company c")
 public class Company {
 
     //region Properties

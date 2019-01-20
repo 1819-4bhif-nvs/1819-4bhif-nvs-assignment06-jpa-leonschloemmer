@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Entity
-@Table(name = "storagespace")
+@NamedQuery(name = "StorageSpace.findAll", query = "select s from StorageSpace s")
 public class StorageSpace {
 
     //region Properties

@@ -10,7 +10,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-@Entity(name = "customer")
+@Entity
+@NamedQuery(name = "Customer.findAll", query = "select c from Customer c")
 public class Customer extends Person {
 
     //region Properties
@@ -58,9 +59,9 @@ public class Customer extends Person {
 
     //endregion
 
-    public void storeCar(Car car, String location, LocalDate storagEnd) {
+    public void storeCar(Car car, String location, LocalDate storageEnd) {
         car.setStorageStart(LocalDate.now());
-        car.setStorageEnd(storagEnd);
+        car.setStorageEnd(storageEnd);
         company.storeCar(car, location);
     }
 

@@ -10,11 +10,13 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@NamedQuery(name = "WarehouseManager.findAll", query = "select w from WarehouseManager w")
 public class WarehouseManager extends Person {
 
     //region Properties
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "person_id")
+    //@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    //@JoinColumn(name = "person_id")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private Set<Warehouse> warehouses;
     //endregion
 

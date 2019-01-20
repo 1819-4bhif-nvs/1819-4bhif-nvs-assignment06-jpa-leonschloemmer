@@ -1,13 +1,15 @@
 package at.leonschloemmer.carwarehouse.model.cars;
 
 import at.leonschloemmer.carwarehouse.model.Drive;
+import at.leonschloemmer.carwarehouse.model.people.Customer;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 import java.util.List;
 
-@Entity(name = "supercar")
+@Entity
+@NamedQuery(name = "Supercar.findAll", query = "select s from Supercar s")
 public class Supercar extends Car {
 
     //region Properties
@@ -47,6 +49,14 @@ public class Supercar extends Car {
         this.drivingCycle = drivingCycle;
     }
 
+    public Supercar(int horsepower, int value, int yearProduced, String make, String model, int mileage, String summertyreSpec, double trickleChargerVoltage, String oilGrade, String fuelGrade, int serviceCycle, int drivingCycle, Customer customer) {
+        super(horsepower, value, yearProduced, make, model, mileage, summertyreSpec, customer);
+        this.trickleChargerVoltage = trickleChargerVoltage;
+        this.oilGrade = oilGrade;
+        this.fuelGrade = fuelGrade;
+        this.serviceCycle = serviceCycle;
+        this.drivingCycle = drivingCycle;
+    }
     //endregion
 
     //region Getters and Setters

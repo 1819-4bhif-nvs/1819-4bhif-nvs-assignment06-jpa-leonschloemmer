@@ -1,11 +1,14 @@
 package at.leonschloemmer.carwarehouse.model.cars;
 
+import at.leonschloemmer.carwarehouse.model.people.Customer;
+
 import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "suv")
+@NamedQuery(name = "SUV.findAll", query = "select s from SUV s")
 public class SUV extends Car {
 
     //region Properties
@@ -27,6 +30,12 @@ public class SUV extends Car {
 
     public SUV(int horsepower, int value, int yearProduced, String make, String model, int mileage, String summertyreSpec, int cleaningCycle, String wintertyreSpec) {
         super(horsepower, value, yearProduced, make, model, mileage, summertyreSpec);
+        this.cleaningCycle = cleaningCycle;
+        this.wintertyreSpec = wintertyreSpec;
+    }
+
+    public SUV(int horsepower, int value, int yearProduced, String make, String model, int mileage, String summertyreSpec, int cleaningCycle, String wintertyreSpec, Customer customer) {
+        super(horsepower, value, yearProduced, make, model, mileage, summertyreSpec, customer);
         this.cleaningCycle = cleaningCycle;
         this.wintertyreSpec = wintertyreSpec;
     }

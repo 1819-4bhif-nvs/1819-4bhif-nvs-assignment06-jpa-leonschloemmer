@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "drive")
+@NamedQuery(name = "Drive.findAll", query = "select d from Drive d")
 public class Drive {
 
     //region Properties
