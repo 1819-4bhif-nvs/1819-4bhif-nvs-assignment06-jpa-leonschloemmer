@@ -7,9 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="386f522f-8ab3-4d2f-bd5c-61a8dfa9c282" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Warehouse-st/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse-st/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8adcf194-3586-48e4-a64e-0d8fd50159cc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b026305e-4b63-4830-bb61-108be6c1e2d7.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,7 +45,7 @@
     <session id="-1117697688">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -141,8 +138,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+            <state relative-caret-position="120">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -876,7 +873,7 @@
       <workItem from="1547977997688" duration="5352000" />
       <workItem from="1547988432266" duration="43000" />
       <workItem from="1547988572918" duration="41000" />
-      <workItem from="1547989121630" duration="265000" />
+      <workItem from="1547989121630" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="Implementation of Data model. Does not work.">
       <created>1544303712297</created>
@@ -897,7 +894,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61269000" />
+    <option name="totallyTimeSpent" value="61719000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1564,8 +1561,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        <state relative-caret-position="120">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
