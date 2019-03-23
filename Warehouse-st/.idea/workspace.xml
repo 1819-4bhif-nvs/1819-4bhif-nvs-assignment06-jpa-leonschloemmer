@@ -2,8 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b7ed888-17b8-463a-a48e-d6ba2caea13f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/dataSources/8adcf194-3586-48e4-a64e-0d8fd50159cc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/dataSources/b026305e-4b63-4830-bb61-108be6c1e2d7.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CarEndpoitIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CustomerEndpointIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/rest/CarEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/car-warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/car-warehouse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/core/InitBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/core/InitBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/Company.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/Drive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/StorageSpace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/Warehouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/cars/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/cars/SUV.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/cars/Sportscar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/cars/Supercar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/cars/UtilityVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/people/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/people/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/model/people/WarehouseManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/rest/CustomerEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/rest/CustomerEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/rest/SupercarEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouse/src/main/java/at/leonschloemmer/carwarehouse/rest/SupercarEndpoint.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -13,52 +37,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1996143468">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.51" value="1" />
-          <entry key="project.open.time.54" value="1" />
-          <entry key="project.opened" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="534" />
-          <entry key="xml" value="146" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="534" />
-          <entry key="XML" value="146" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/SupercarsEndpointIT.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
+              <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CustomerEndpointIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CarEndpoitIT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,14 +101,10 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/SupercarsEndpointIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CustomerEndpointIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CarEndpoitIT.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -110,15 +115,18 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,13 +165,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547987680988" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553357955129" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -180,8 +187,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="SupercarsEndpointIT.fetchSupercar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CarEndpoitIT.test04_updateCar">
+    <configuration name="CarEndpoitIT.test01_getAllCars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="warehouse-st" />
       <extension name="coverage">
         <pattern>
@@ -190,17 +197,91 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="at.leonschloemmer.warehouse.test" />
-      <option name="MAIN_CLASS_NAME" value="at.leonschloemmer.warehouse.test.SupercarsEndpointIT" />
-      <option name="METHOD_NAME" value="fetchSupercar" />
+      <option name="MAIN_CLASS_NAME" value="at.leonschloemmer.warehouse.test.CarEndpoitIT" />
+      <option name="METHOD_NAME" value="test01_getAllCars" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CarEndpoitIT.test02_getCarById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="warehouse-st" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.leonschloemmer.warehouse.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.leonschloemmer.warehouse.test" />
+      <option name="MAIN_CLASS_NAME" value="at.leonschloemmer.warehouse.test.CarEndpoitIT" />
+      <option name="METHOD_NAME" value="test02_getCarById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarEndpoitIT.test03_newCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="warehouse-st" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.leonschloemmer.warehouse.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.leonschloemmer.warehouse.test" />
+      <option name="MAIN_CLASS_NAME" value="at.leonschloemmer.warehouse.test.CarEndpoitIT" />
+      <option name="METHOD_NAME" value="test03_newCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarEndpoitIT.test04_updateCar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="warehouse-st" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.leonschloemmer.warehouse.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.leonschloemmer.warehouse.test" />
+      <option name="MAIN_CLASS_NAME" value="at.leonschloemmer.warehouse.test.CarEndpoitIT" />
+      <option name="METHOD_NAME" value="test04_updateCar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerEndpointIT.updateCustomerName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="warehouse-st" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.leonschloemmer.warehouse.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.leonschloemmer.warehouse.test" />
+      <option name="MAIN_CLASS_NAME" value="at.leonschloemmer.warehouse.test.CustomerEndpointIT" />
+      <option name="METHOD_NAME" value="updateCustomerName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.CustomerEndpointIT.updateCustomerName" />
+      <item itemvalue="JUnit.CarEndpoitIT.test01_getAllCars" />
+      <item itemvalue="JUnit.CarEndpoitIT.test02_getCarById" />
+      <item itemvalue="JUnit.CarEndpoitIT.test03_newCar" />
+      <item itemvalue="JUnit.CarEndpoitIT.test04_updateCar" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SupercarsEndpointIT.fetchSupercar" />
+        <item itemvalue="JUnit.CarEndpoitIT.test04_updateCar" />
+        <item itemvalue="JUnit.CarEndpoitIT.test03_newCar" />
+        <item itemvalue="JUnit.CarEndpoitIT.test02_getCarById" />
+        <item itemvalue="JUnit.CarEndpoitIT.test01_getAllCars" />
+        <item itemvalue="JUnit.CustomerEndpointIT.updateCustomerName" />
       </list>
     </recent_temporary>
   </component>
@@ -221,44 +302,62 @@
       <workItem from="1547559868053" duration="1681000" />
       <workItem from="1547978283163" duration="1263000" />
       <workItem from="1547988433432" duration="35000" />
+      <workItem from="1548056856545" duration="5028000" />
+      <workItem from="1548084176549" duration="757000" />
+      <workItem from="1553355079437" duration="2331000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SupercarsEndpointIT_fetchSupercar - 2018.12.09 at 12h 19m 31s.xml">
-      <configuration name="SupercarsEndpointIT.fetchSupercar" configurationId="JUnit" />
+    <history-entry file="CustomerEndpointIT_updateCustomerName - 2019.01.21 at 10h 26m 34s.xml">
+      <configuration name="CustomerEndpointIT.updateCustomerName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SupercarsEndpointIT_fetchSupercar - 2019.01.14 at 19h 11m 45s.xml">
-      <configuration name="SupercarsEndpointIT.fetchSupercar" configurationId="JUnit" />
+    <history-entry file="CustomerEndpointIT_updateCustomerName - 2019.01.21 at 10h 30m 50s.xml">
+      <configuration name="CustomerEndpointIT.updateCustomerName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SupercarsEndpointIT_fetchSupercar - 2019.01.14 at 19h 13m 44s.xml">
-      <configuration name="SupercarsEndpointIT.fetchSupercar" configurationId="JUnit" />
+    <history-entry file="CustomerEndpointIT_updateCustomerName - 2019.01.21 at 10h 33m 25s.xml">
+      <configuration name="CustomerEndpointIT.updateCustomerName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SupercarsEndpointIT_fetchSupercar - 2019.01.15 at 15h 32m 40s.xml">
-      <configuration name="SupercarsEndpointIT.fetchSupercar" configurationId="JUnit" />
+    <history-entry file="CustomerEndpointIT_updateCustomerName - 2019.01.21 at 10h 33m 44s.xml">
+      <configuration name="CustomerEndpointIT.updateCustomerName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SupercarsEndpointIT_fetchSupercar - 2019.01.20 at 10h 59m 38s.xml">
-      <configuration name="SupercarsEndpointIT.fetchSupercar" configurationId="JUnit" />
+    <history-entry file="CustomerEndpointIT_updateCustomerName - 2019.01.21 at 10h 35m 01s.xml">
+      <configuration name="CustomerEndpointIT.updateCustomerName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CarEndpoitIT_test01_getAllCars - 2019.03.23 at 16h 39m 40s.xml">
+      <configuration name="CarEndpoitIT.test01_getAllCars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CarEndpoitIT_test01_getAllCars - 2019.03.23 at 16h 40m 16s.xml">
+      <configuration name="CarEndpoitIT.test01_getAllCars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CarEndpoitIT_test02_getCarById - 2019.03.23 at 16h 55m 30s.xml">
+      <configuration name="CarEndpoitIT.test02_getCarById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CarEndpoitIT_test02_getCarById - 2019.03.23 at 16h 55m 59s.xml">
+      <configuration name="CarEndpoitIT.test02_getCarById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CarEndpoitIT_test03_newCar - 2019.03.23 at 17h 13m 19s.xml">
+      <configuration name="CarEndpoitIT.test03_newCar" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6312000" />
+    <option name="totallyTimeSpent" value="14428000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25824177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30978933" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31798247" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.56299216" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -267,6 +366,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -281,9 +381,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -293,17 +390,20 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CustomerEndpointIT.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/SupercarsEndpointIT.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -311,6 +411,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/SupercarsEndpointIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CustomerEndpointIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/at/leonschloemmer/warehouse/test/CarEndpoitIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
