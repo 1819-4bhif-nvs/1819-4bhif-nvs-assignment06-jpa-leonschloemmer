@@ -1,9 +1,6 @@
 package at.leonschloemmer.carwarehouse.core;
 
-import at.leonschloemmer.carwarehouse.model.Car;
-import at.leonschloemmer.carwarehouse.model.Customer;
-import at.leonschloemmer.carwarehouse.model.Manager;
-import at.leonschloemmer.carwarehouse.model.Warehouse;
+import at.leonschloemmer.carwarehouse.model.*;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -48,7 +45,7 @@ public class InitBean {
 //        em.persist(lamborghiniHuracan);
 
         Car lambo = new Car("Lamborghini", "Huracan", 610, 250000);
-        Customer leon = new Customer("Leon");
+        Customer leon = new Customer("Leon", "LEON01");
         Manager andi = new Manager("Andi");
         Warehouse london = new Warehouse("London");
         london.getManagers().add(andi);
@@ -57,11 +54,18 @@ public class InitBean {
 
         Warehouse huffington = new Warehouse("Huffington");
 
+        Service drive = new Service("Drive 40km", 30);
+
+        Storage storage = new Storage(lambo, leon, andi, drive, LocalDate.of(2019, 3, 24), LocalDate.of(2019, 4, 24));
+
+
         em.persist(lambo);
         em.persist(leon);
         em.persist(london);
         em.persist(andi);
         em.persist(huffington);
+        em.persist(drive);
+        em.persist(storage);
 
         //andi.setWarehouse(london);
         //em.merge(andi);
