@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @NamedQuery(name = "Storage.findAll", query = "select s from Storage s")
+@NamedQuery(name = "Storage.findById", query = "select s from Storage s where s.id = :id")
 @NamedQuery(name = "Storage.findByCarId", query = "select s from Storage s where s.car.id = :id")
 @NamedQuery(name = "Storage.findByCustomerId", query = "select s from Storage s where s.customer.id = :id")
 @NamedQuery(name = "Storage.findByManagerId", query = "select s from Storage s where s.manager.id = :id")
