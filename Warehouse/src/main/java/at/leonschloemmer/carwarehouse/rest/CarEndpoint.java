@@ -4,6 +4,7 @@ import at.leonschloemmer.carwarehouse.model.Car;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.ws.rs.*;
@@ -41,5 +42,16 @@ public class CarEndpoint {
     public Response updateCar(Car car) {
         em.merge(car);
         return Response.ok(car).build();
+    }
+
+    @DELETE
+    public Response deleteCar(@QueryParam("id") long id) {
+        try {
+            TypedQuery<Car> query = em.createNamedQuery("Car.findById", Car.class);
+            Car car = query.getSingleResult();
+            return Response.ok().entity(car).build();
+        } catch (NoResultException e) {
+            return Response.status(404).build();
+        }
     }
 }

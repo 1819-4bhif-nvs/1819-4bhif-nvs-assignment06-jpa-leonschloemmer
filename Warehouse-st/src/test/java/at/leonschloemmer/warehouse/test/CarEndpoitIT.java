@@ -59,8 +59,9 @@ public class CarEndpoitIT {
         carBuilder.add("model", "Huracan");
         carBuilder.add("horsepower", 620);
         carBuilder.add("value", 240000);
+        carBuilder.add("id", 1);
         JsonObject car = carBuilder.build();
-        Response response = target.request(MediaType.APPLICATION_JSON).post(Entity.entity(car.toString(), MediaType.APPLICATION_JSON));
+        Response response = target.request(MediaType.APPLICATION_JSON).put(Entity.entity(car.toString(), MediaType.APPLICATION_JSON));
         assertThat(response.getStatus(), is(200));
         car = response.readEntity(JsonObject.class);
         assertThat(car.getInt("horsepower"), is(620));
