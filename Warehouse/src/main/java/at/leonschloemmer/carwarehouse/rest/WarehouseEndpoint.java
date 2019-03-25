@@ -17,24 +17,20 @@ public class WarehouseEndpoint {
     EntityManager em;
 
     @GET
-    public Response getWarehouses() {
-        TypedQuery<Warehouse> query = em.createNamedQuery("Warehouse.findAll", Warehouse.class);
-        List<Warehouse> warehouses = query.getResultList();
-        return Response.ok().entity(warehouses).build();
-    }
-
-    @GET
-    @Path("warehouse")
     public Response getWarehouseByLocation (@QueryParam("location") String location, @QueryParam("id") Long id) {
         try {
-            if (id == null) {
+            if (id == null && location != null) {
                 TypedQuery<Warehouse> query = em.createNamedQuery("Warehouse.findByLocation", Warehouse.class).setParameter("location", location);
                 List<Warehouse> warehouse = query.getResultList();
                 return Response.ok().entity(warehouse).build();
-            } else {
+            } else if (location == null && id != null){
                 TypedQuery<Warehouse> query = em.createNamedQuery("Warehouse.findById", Warehouse.class).setParameter("id", id);
                 Warehouse warehouse = query.getSingleResult();
                 return Response.ok().entity(warehouse).build();
+            } else {
+                TypedQuery<Warehouse> query = em.createNamedQuery("Warehouse.findAll", Warehouse.class);
+                List<Warehouse> warehouses = query.getResultList();
+                return Response.ok().entity(warehouses).build();
             }
         } catch (NoResultException e) {
             return Response.status(404).build();
@@ -52,17 +48,6 @@ public class WarehouseEndpoint {
     public Response updateWarehouse(Warehouse warehouse) {
         em.merge(warehouse);
         return Response.ok().entity(warehouse).build();
-    }
-
-    @DELETE
-    @Path("warehouse")
-    public Response deleteWarehouse(Warehouse warehouse) {
-        try {
-            em.remove(warehouse);
-            return Response.ok().entity(warehouse).build();
-        } catch (IllegalArgumentException e) {
-            return Response.status(404).build();
-        }
     }
 
     @DELETE

@@ -18,18 +18,16 @@ public class CarEndpoint {
     private EntityManager em;
 
     @GET
-    public Response getAllCars() {
-        TypedQuery<Car> query = em.createNamedQuery("Car.findAll", Car.class);
-        List<Car> cars = query.getResultList();
-        return Response.ok().entity(cars).build();
-    }
-
-    @GET
-    @Path("car") // TODO Clean up methods, make GET one
-    public Response getCarById (@QueryParam("id") long id) {
-        TypedQuery<Car> query = em.createNamedQuery("Car.findById", Car.class).setParameter("id", id);
-        Car car = query.getSingleResult();
-        return Response.ok().entity(car).build();
+    public Response getAllCars(@QueryParam("id") Long id) {
+        if (id == null) {
+            TypedQuery<Car> query = em.createNamedQuery("Car.findAll", Car.class);
+            List<Car> cars = query.getResultList();
+            return Response.ok().entity(cars).build();
+        } else {
+            TypedQuery<Car> query = em.createNamedQuery("Car.findById", Car.class).setParameter("id", id);
+            Car car = query.getSingleResult();
+            return Response.ok().entity(car).build();
+        }
     }
 
     @POST

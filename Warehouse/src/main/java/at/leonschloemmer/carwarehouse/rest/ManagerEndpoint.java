@@ -18,21 +18,19 @@ public class ManagerEndpoint {
     EntityManager em;
 
     @GET
-    public Response getAllManagers() {
-        TypedQuery<Manager> query = em.createNamedQuery("Manager.findAll", Manager.class);
-        List<Manager> managers = query.getResultList();
-        return Response.ok().entity(managers).build();
-    }
-
-    @GET
-    @Path("manager") // TODO Clean up methods, make GET one
-    public Response getManagerWithId(@QueryParam("id") Long id) {
-        try {
-            TypedQuery<Manager> query = em.createNamedQuery("Manager.findById", Manager.class).setParameter("id", id);
-            Manager manager = query.getSingleResult();
-            return Response.ok().entity(manager).build();
-        } catch (NoResultException e) {
-            return Response.status(404).build();
+    public Response getAllManagers(@QueryParam("id") Long id) {
+        if (id == null) {
+            TypedQuery<Manager> query = em.createNamedQuery("Manager.findAll", Manager.class);
+            List<Manager> managers = query.getResultList();
+            return Response.ok().entity(managers).build();
+        } else {
+            try {
+                TypedQuery<Manager> query = em.createNamedQuery("Manager.findById", Manager.class).setParameter("id", id);
+                Manager manager = query.getSingleResult();
+                return Response.ok().entity(manager).build();
+            } catch (NoResultException e) {
+                return Response.status(404).build();
+            }
         }
     }
 
