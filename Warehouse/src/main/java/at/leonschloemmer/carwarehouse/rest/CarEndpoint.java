@@ -25,7 +25,7 @@ public class CarEndpoint {
     }
 
     @GET
-    @Path("car")
+    @Path("car") // TODO Clean up methods, make GET one
     public Response getCarById (@QueryParam("id") long id) {
         TypedQuery<Car> query = em.createNamedQuery("Car.findById", Car.class).setParameter("id", id);
         Car car = query.getSingleResult();

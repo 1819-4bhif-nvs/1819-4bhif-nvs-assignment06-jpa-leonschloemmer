@@ -1,11 +1,9 @@
 package at.leonschloemmer.carwarehouse.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name = "Service.findById", query = "select s from Service s where s.id = :id")
 public class Service {
 
     @Id

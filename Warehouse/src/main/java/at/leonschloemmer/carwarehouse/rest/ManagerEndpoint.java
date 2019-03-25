@@ -25,7 +25,7 @@ public class ManagerEndpoint {
     }
 
     @GET
-    @Path("manager")
+    @Path("manager") // TODO Clean up methods, make GET one
     public Response getManagerWithId(@QueryParam("id") Long id) {
         try {
             TypedQuery<Manager> query = em.createNamedQuery("Manager.findById", Manager.class).setParameter("id", id);

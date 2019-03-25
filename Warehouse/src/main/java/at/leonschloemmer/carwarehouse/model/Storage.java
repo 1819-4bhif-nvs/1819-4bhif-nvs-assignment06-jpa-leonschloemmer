@@ -1,10 +1,15 @@
 package at.leonschloemmer.carwarehouse.model;
 
+import at.leonschloemmer.carwarehouse.core.LocalDateXmlAdapter;
+
+import javax.json.bind.annotation.JsonbTypeAdapter;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@NamedQuery(name = "Storage.findAll", query = "select s from Storage s")
+@NamedQuery(name = "Storage.findAll", query = "select s from Storage s join fetch s.manager")
 @NamedQuery(name = "Storage.findById", query = "select s from Storage s where s.id = :id")
 @NamedQuery(name = "Storage.findByCarId", query = "select s from Storage s where s.car.id = :id")
 @NamedQuery(name = "Storage.findByCustomerId", query = "select s from Storage s where s.customer.id = :id")
@@ -24,20 +29,23 @@ public class Storage {
     @ManyToOne(cascade = CascadeType.ALL,
                 fetch = FetchType.EAGER)
     private Manager manager;
-    @ManyToOne(cascade = CascadeType.ALL,
+    @ManyToMany(cascade = CascadeType.ALL,
                 fetch = FetchType.EAGER)
-    private Service service;
+    private Set<Service> services;
+    @JsonbTypeAdapter(LocalDateXmlAdapter.class)
     private LocalDate startOfStorage;
+    @JsonbTypeAdapter(LocalDateXmlAdapter.class)
     private LocalDate endOfStorage;
 
     public Storage() {
+        services = new HashSet<>();
     }
 
-    public Storage(Car car, Customer customer, Manager manager, Service service, LocalDate startOfStorage, LocalDate endOfStorage) {
+    public Storage(Car car, Customer customer, Manager manager, LocalDate startOfStorage, LocalDate endOfStorage) {
+        this();
         this.car = car;
         this.customer = customer;
         this.manager = manager;
-        this.service = service;
         this.startOfStorage = startOfStorage;
         this.endOfStorage = endOfStorage;
     }
@@ -74,12 +82,12 @@ public class Storage {
         this.manager = manager;
     }
 
-    public Service getService() {
-        return service;
+    public Set<Service> getServices() {
+        return services;
     }
 
-    public void setService(Service service) {
-        this.service = service;
+    public void setServices(Set<Service> services) {
+        this.services = services;
     }
 
     public LocalDate getStartOfStorage() {

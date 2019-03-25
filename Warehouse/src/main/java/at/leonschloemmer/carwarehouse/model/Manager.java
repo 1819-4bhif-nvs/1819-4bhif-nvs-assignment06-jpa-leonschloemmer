@@ -3,11 +3,11 @@ package at.leonschloemmer.carwarehouse.model;
 import javax.persistence.*;
 
 @Entity
-@NamedQuery(name = "Manager.findAll", query = "select m from Manager m join fetch m.warehouse")
-@NamedQuery(name = "Manager.findById", query = "select m from Manager m join fetch m.warehouse where m.id = :id")
+@NamedQuery(name = "Manager.findAll", query = "select m from Manager m")
+@NamedQuery(name = "Manager.findById", query = "select m from Manager m where m.id = :id")
 public class Manager extends Person {
 
-    @ManyToOne(fetch = FetchType.LAZY,
+    @ManyToOne(fetch = FetchType.EAGER,
                 cascade = CascadeType.ALL)
     private Warehouse warehouse;
 

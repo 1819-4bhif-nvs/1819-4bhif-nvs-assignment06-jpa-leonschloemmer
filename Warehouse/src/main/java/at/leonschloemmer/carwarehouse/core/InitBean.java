@@ -56,7 +56,8 @@ public class InitBean {
 
         Service drive = new Service("Drive 40km", 30);
 
-        Storage storage = new Storage(lambo, leon, andi, drive, LocalDate.of(2019, 3, 24), LocalDate.of(2019, 4, 24));
+        Storage storage = new Storage(lambo, leon, andi, LocalDate.of(2019, 3, 24), LocalDate.of(2019, 4, 24));
+        storage.getServices().add(drive);
 
 
         em.persist(lambo);
